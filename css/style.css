@@ -109,6 +109,7 @@ footer {
 .copyright {
     color: #D7D7D7;
 }
+<<<<<<< HEAD
 /* About Me Page */
 .about-me {
     flex-direction: column;
@@ -136,3 +137,5 @@ footer {
 .block {
     display: block;
 }
+=======
+>>>>>>> dacbf130dd59642ce9e65e7da3aa318ae3dc8cb0
