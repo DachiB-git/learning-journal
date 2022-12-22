@@ -1,6 +1,12 @@
 import {articlesData} from "./data.js"
+const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 let index = 0;
-
+let change = 0;
+if (width > 767) {
+    change = 6;
+} else {
+    change = 3;
+}
 document.addEventListener('click', e => {
     if(e.target.id === 'view-more-btn'){
         loadMore();
@@ -13,7 +19,7 @@ function loadMore() {
 }
 function fetchData() {
     let dataHTML = '';
-    for (let i = index; i < index + 3; i++){
+    for (let i = index; i < index + change; i++){
        if (i === articlesData.length) {
            index =articlesData.length;
           break;
@@ -22,7 +28,7 @@ function fetchData() {
       dataHTML += constructArticle(articlesData[i]);
       
    }
-    index+=3;
+    index+=change;
     return dataHTML;
 }
 
