@@ -13,8 +13,7 @@ function loadMore() {
 }
 function fetchData() {
     let dataHTML = '';
-    // index += 3;
-   for (let i = index; i < index + 3; i++){
+    for (let i = index; i < index + 3; i++){
        if (i === articlesData.length) {
            index =articlesData.length;
           break;
